@@ -4,6 +4,9 @@ POST https://id.twitch.tv/oauth2/token?
     client_secret={{client_secret}}&
     grant_type=client_credentials
 
+> {%
+    client.global.set("token", response.body.access_token);
+%}
 
 ###Get Games
 POST {{base_url}}/games
