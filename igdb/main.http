@@ -1,0 +1,13 @@
+###Authentication
+POST https://id.twitch.tv/oauth2/token?
+    client_id={{client_id}}&
+    client_secret={{client_secret}}&
+    grant_type=client_credentials
+
+
+###Get Games
+POST {{base_url}}/games
+Client-ID: {{client_id}}
+Authorization: Bearer {{token}}
+
+fields name,rating,platforms,genres,age_ratings,cover; where rating > 90; sort date desc;
