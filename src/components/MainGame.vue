@@ -2,12 +2,15 @@
 
 import {Game} from "@/types/Game.types";
 
-const game = new Game('Half life Alyx', 'co1tq3')
-
+defineProps({game: Game})
 </script>
 
 <template>
-  <div class="main-game-div-full-page" :style="{backgroundImage: game.imageBackground()}">
+  <div class="main-game-div-full-page">
+    <picture>
+      <source :srcset="game.imageBackground()">
+      <img :src="game.imageBackground()" :alt="game.name">
+    </picture>
     <h1 class="name">{{game.name}}</h1>
     <div class="rating"></div>
     <p class="description">{{game.name}}</p>
