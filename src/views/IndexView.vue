@@ -4,11 +4,11 @@ import {Game} from "@/types/Game.types";
 import HorizontalList from "@/components/HorizontalList.vue";
 
 const games = [
-    new Game('Half life Alyx',  30,'co1tq3'),
-    new Game('Half life Alyx1', 0,'co1tq3'),
-    new Game('Half life Alyx2', 100,'co1tq3'),
-    new Game('Half life Alyx3', 50,'co1tq3'),
-    new Game('Half life Alyx4', 32.14,'co1tq3'),
+    new Game('Metroid Prime Remastered',  95.01,'co658o'),
+    new Game('The Legend of Zelda: Tears of the Kingdom', 98.38,'co5vmg'),
+    new Game('God of War Ragnarök', 94.26,'co5s5v'),
+    new Game('Goat Simulator 3', 99.61,'co4uks'),
+    new Game('Hi-Fi Rush', 91.31,'co6219'),
 ]
 </script>
 
