@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {Game} from "@/types/Game.types";
-
+import Rating from "@/components/RatingGame.vue";
 defineProps({game: Game})
 </script>
 
@@ -12,7 +12,7 @@ defineProps({game: Game})
         <img  class="image" :src="game.imageCover()" :alt="game.name">
       </picture>
       <h1 class="name">{{game.name}}</h1>
-      <div class="rating"></div>
+      <Rating :value="game.rating"/>
       <p class="description">{{game.name}}</p>
     </div>
   </li>

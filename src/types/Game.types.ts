@@ -1,9 +1,11 @@
 export class Game {
     public name: string
+    public rating: number
     image: string
 
-    constructor(name: string, image: string) {
+    constructor(name: string, rating: number, image: string) {
         this.name = name;
+        this.rating = rating;
         this.image = image;
     }
 

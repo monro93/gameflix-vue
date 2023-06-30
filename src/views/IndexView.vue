@@ -4,11 +4,11 @@ import {Game} from "@/types/Game.types";
 import HorizontalList from "@/components/HorizontalList.vue";
 
 const games = [
-    new Game('Half life Alyx', 'co1tq3'),
-    new Game('Half life Alyx1', 'co1tq3'),
-    new Game('Half life Alyx2', 'co1tq3'),
-    new Game('Half life Alyx3', 'co1tq3'),
-    new Game('Half life Alyx4', 'co1tq3'),
+    new Game('Half life Alyx',  30,'co1tq3'),
+    new Game('Half life Alyx1', 0,'co1tq3'),
+    new Game('Half life Alyx2', 100,'co1tq3'),
+    new Game('Half life Alyx3', 50,'co1tq3'),
+    new Game('Half life Alyx4', 32.14,'co1tq3'),
 ]
 </script>
 
