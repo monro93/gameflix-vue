@@ -3,24 +3,31 @@ defineProps({value: Number})
 </script>
 
 <template>
-    <div class="star star-form">
-        <div class="star-fill" :style="{ height: value + '%' }" :data-value="value"></div>
-        <div class="star-grey"></div>
-        <p class="rating-text">{{(value/10).toFixed(1)}}</p>
+    <div class="rating-container">
+        <div class="rating-star rating-star-form">
+            <div class="rating-star-fill" :style="{ height: value + '%' }" :data-value="value"></div>
+            <div class="rating-star-grey"></div>
+            <p class="rating-rating-text">{{(value/10).toPrecision(2)}}</p>
+        </div>
     </div>
 </template>
 
 <style scoped>
-.star-form  {
-    clip-path: polygon(50% 0%, 33% 33%, 0% 38%, 23% 66%, 17% 100%, 50% 83%, 83% 100%, 77% 66%, 100% 38%, 66% 33%);
-}
-.star {
-    position: relative;
+.rating-container {
     height: 100px;
     width: 100px;
 }
 
-.star-fill {
+.rating-star-form  {
+    clip-path: polygon(50% 0%, 33% 33%, 0% 38%, 23% 66%, 17% 100%, 50% 83%, 83% 100%, 77% 66%, 100% 38%, 66% 33%);
+}
+.rating-star {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.rating-star-fill {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -30,7 +37,7 @@ defineProps({value: Number})
     z-index: 10;
 }
 
-.star-grey {
+.rating-star-grey {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,12 +46,12 @@ defineProps({value: Number})
     width: 100%;
 }
 
-.rating-text {
+.rating-rating-text {
     position: absolute;
-    top: 45%;
+    top: 34%;
     text-align: center;
     line-height: 100%;
-    font-size: 1.5em;
+    font-size: 1em;
     width: 100%;
     color: black;
     z-index: 100;

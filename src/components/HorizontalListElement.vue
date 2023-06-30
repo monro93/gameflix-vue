@@ -6,22 +6,30 @@ defineProps({game: Game})
 
 <template>
   <li class="list-element-container-li">
-    <div class="image-cover">
+    <div class="list-element-container-li-image-cover">
       <picture>
         <source :srcset="game.imageCover()">
         <img  class="image" :src="game.imageCover()" :alt="game.name">
       </picture>
-      <h1 class="name">{{game.name}}</h1>
-      <Rating :value="game.rating"/>
-      <p class="description">{{game.name}}</p>
+      <Rating class="list-element-container-rating" :value="game.rating"/>
     </div>
   </li>
 </template>
 
 
 <style scoped>
-.image-cover {
+
+.list-element-container-li-image-cover {
   width: 150px;
+    position: relative;
+}
+
+.list-element-container-rating{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 1px;
 }
 
 .image {
