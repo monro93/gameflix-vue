@@ -13,11 +13,4 @@ POST {{base_url}}/games
 Client-ID: {{client_id}}
 Authorization: Bearer {{token}}
 
-fields name,rating,platforms,genres,age_ratings,cover; where rating > 90; sort date desc;
-
-###Get Cover
-POST {{base_url}}/covers
-Client-ID: {{client_id}}
-Authorization: Bearer {{token}}
-
-fields url; where id = 85179;
+fields name,rating,platforms.abbreviation,genres.name,age_ratings,cover.url; where rating > 90; sort first_release_date desc;
