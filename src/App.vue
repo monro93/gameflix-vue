@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import devtools from '@vue/devtools'
-devtools.connect('http://localhost', '5173')
+if (process.env.NODE_ENV === 'development') {
+  import('@vue/devtools').then(devtools => {
+    devtools.connect('http://localhost', '5173');
+  });
+}
 </script>
 
 <template>
